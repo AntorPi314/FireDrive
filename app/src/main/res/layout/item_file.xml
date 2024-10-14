@@ -1,0 +1,66 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:paddingTop="8dp"
+    android:paddingStart="8dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:ignore="UselessParent">
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Name.jpg"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:paddingEnd="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvFileDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            android:text="1.5 MB  |  12-10-2024  |  01:49 PM"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D5CECE"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+</LinearLayout>

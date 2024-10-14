@@ -1,0 +1,48 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
+}
+
+android {
+    namespace 'com.adro.firedrive'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.adro.firedrive"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            universalApk false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.recyclerview
+    implementation libs.glide
+    implementation libs.firebase.firestore
+    implementation libs.firebase.storage
+}

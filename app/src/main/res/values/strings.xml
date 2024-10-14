@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Fire Drive</string>
+
+
+    <string-array name="sort_options">
+        <item>Date (Newest)</item>
+        <item>Date (Oldest)</item>
+        <item>Size (Bigger)</item>
+        <item>Size (Smaller)</item>
+    </string-array>
+</resources>
